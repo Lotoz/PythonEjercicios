@@ -1,2 +1,2 @@
-numero = int(input("Introduce un numero: "))
-print("El numero introducido es", numero)
+numero = float(input("Introduce un numero: "))
+print("El numero introducido es", abs(numero))
