@@ -1,6 +1,10 @@
 import rombo
 import adivina
-import ecuacion
+import ecucacion 
+import tablaDeNumeros
+import fibonacci
+import tablaMultiplicar
+import factorial
 
 def imprimeError():
     print("La opcion es incorrecta")
@@ -21,7 +25,6 @@ def imprimeMenu():
         print(i)
 
 def menu():
-    imprimeMenu()
     flag = False
     while(flag == False):
         imprimeMenu()
@@ -35,19 +38,19 @@ def menu():
                 adivina.adivinaNumero()
                 imprimeMenu()
             case 'c':
-                ecuacion.resuelveEcuacion()
+                ecucacion.resuelveEcuacion()
                 imprimeMenu()
             case 'd':
-                tablaNumeros()
+                tablaDeNumeros.tablaNumeros()
                 imprimeMenu()
             case 'e':
-                calculoFactorial()
+                factorial.calculoFactorial()
                 imprimeMenu()
             case 'f':
-                sucesionFibonacci()
+                fibonacci.sucesionFibonacci()
                 imprimeMenu()
             case 'g':
-                tablaMultiplicar()
+                tablaMultiplicar.tablaMultiplicar()
                 imprimeMenu()
             case 'h':
                 flag = True

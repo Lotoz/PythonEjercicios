@@ -26,7 +26,9 @@ def resuelveEcuacion():
     else:
         determinante = math.pow(variableB,2) - 4 * variableA * variableC
         if (determinante > 0):
-            x1= -variableB + math.sqrt(determinante)
-
-
-resuelveEcuacion()
+            x1 = (-variableB + math.sqrt(determinante)) / 2 * variableA
+            x2 = (variableB + math.sqrt(determinante)) / 2 * variableA
+            print(f"El valor de x1 =",x1)
+            print(f"El valor de x2 =",x2)
+        else:
+            print(f"No tiene solucion.")
