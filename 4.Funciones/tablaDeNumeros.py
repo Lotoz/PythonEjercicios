@@ -1,9 +1,10 @@
-#Se debe pedir un número de filas y un número de columnas.  
-#A  continuación,  mostrará  una  tabla  con  números  aleatorios  con  las  filas  y  
-#columnas indicadas.
-filas = int(input('Numero de filas: '))
-cols = int(input('Numero de columnas: '))
-
-for i in range(filas):
-    for j in range(cols):
-        print( str(i) + str(j))
+import random
+def tablaNumeros():
+    filas = int(input("Ingrese el numero de filas: "))
+    columnas = int(input("Ingrese el numero de columnas: "))
+    
+    for i in range(filas):
+        for j in range(columnas):
+            numero_aleatorio = random.randint(1, 100)
+            print(f"{numero_aleatorio:4}", end=" ")
+        print()  

@@ -6,11 +6,12 @@ import fibonacci
 import tablaMultiplicar
 import factorial
 
-def imprimeError():
-    print("La opcion es incorrecta")
+def imprimeError(opcion):
+    print(f"La {opcion} no es una opcion valida, por favor ingrese una opcion correcta")
 
 def imprimeMenu():
     menu = [
+        "_"*15,
        "MENU DE OPCIONES",
         "a)Mostrar Rombo",
         "b)Adivinar un numero",
@@ -33,30 +34,22 @@ def menu():
         match opcion:
             case 'a':
                 rombo.mostrarRombo()
-                imprimeMenu()
             case 'b':
                 adivina.adivinaNumero()
-                imprimeMenu()
             case 'c':
                 ecucacion.resuelveEcuacion()
-                imprimeMenu()
             case 'd':
                 tablaDeNumeros.tablaNumeros()
-                imprimeMenu()
             case 'e':
                 factorial.calculoFactorial()
-                imprimeMenu()
             case 'f':
                 fibonacci.sucesionFibonacci()
-                imprimeMenu()
             case 'g':
                 tablaMultiplicar.tablaMultiplicar()
-                imprimeMenu()
             case 'h':
                 flag = True
             case _:
-                imprimeError()
-                imprimeMenu()
+                imprimeError(opcion)
    
 
 
