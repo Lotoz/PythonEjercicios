@@ -7,7 +7,7 @@ import tablaMultiplicar
 import factorial
 
 def imprimeError(opcion):
-    print(f"La {opcion} no es una opcion valida, por favor ingrese una opcion correcta")
+    print(f"La {opcion} no es una opcion valida, por favor ingrese una opcion correcta.")
 
 def imprimeMenu():
     menu = [
