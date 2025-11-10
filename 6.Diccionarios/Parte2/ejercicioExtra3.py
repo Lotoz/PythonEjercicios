@@ -33,3 +33,48 @@ ventas = {
         5: 0
         } 
 }
+#Creamos una funcion que suma las unidades de un diccionario
+#Con esto se recorre el array entero
+  #print(f'{letra} = ind = {ind} numero = {numero}')
+
+#Segun la letra calcula lo siguiente
+#Calcula la suma total del producto
+def sumaTotal(buscado):
+    suma = 0
+    for letra,valor in ventas.items():
+        if (letra == buscado):
+            for ind,numero in valor.items():
+                suma += numero
+    return suma
+
+ventasA = sumaTotal("A")
+ventasB = sumaTotal("B")
+ventasC = sumaTotal("C")
+ventasD = sumaTotal("D")
+
+#*varios indica que son varios componentes, es igual que args en java
+#todo se mete en un array
+def esMaxMenor(*varios):
+    menor = 1 #Numero mas pequeno posible suponiendo si son positivos
+    for numero in varios:
+        if(menor < numero):
+            menor = menor
+        else:
+            menor = numero  
+    return menor
+
+def esMaxMayor(*varios):
+    mayor = 1000000000000000000000 #numero grande para logica
+    for numero in varios:
+        if(mayor < numero):
+            mayor = numero
+        else:
+            mayor = mayor
+    return mayor
+
+
+
+
+
+      
+        
