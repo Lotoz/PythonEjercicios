@@ -9,6 +9,7 @@ def reemplazaVocales():
     buscar = [
         'á','Á','a','A',
         'É','é','e','E',
+        'i','I','í','Í', #Agrego fila de i
         'o','Ó','ó','O',
         'u','U','ú','Ú']
     #Funcion que reemplaza lo buscado
@@ -68,6 +69,13 @@ def palabraLarga():
         if i > larga:
             larga = i
     print(f'La palabra mas larga es {larga}')
+#Genera numeros impares
+def generaNumeroImparAleatorio():
+    while True:
+        numero = random.randint(1, 100)
+        if numero % 2 != 0:
+            return numero
+    
 
 #Para imprimir el triangulo
 def imprimeRectangulo():
@@ -80,7 +88,7 @@ def imprimeRectangulo():
             for i in range(filas):
                 for j in range(columnas):
                     #Numero aleatorios
-                    numero_aleatorio = random.randint(1, 100)
+                    numero_aleatorio = generaNumeroImparAleatorio()
                     print(f"{numero_aleatorio:4}", end=" ")
                 print() 
             flag = False
