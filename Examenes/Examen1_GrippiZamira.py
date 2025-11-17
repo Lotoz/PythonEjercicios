@@ -69,6 +69,7 @@ def palabraLarga():
         if i > larga:
             larga = i
     print(f'La palabra mas larga es {larga}')
+    
 #Genera numeros impares
 def generaNumeroImparAleatorio():
     while True:
