@@ -1,0 +1,9 @@
+#Iniciar proyecto
+py -m django startproject PrimerProyecto
+# iniciar servidor
+Py manage.py runserver
+
+#Buscar si se puede compilar
+
+#Generar extras
+Py manage.py startapp HolaMundo
