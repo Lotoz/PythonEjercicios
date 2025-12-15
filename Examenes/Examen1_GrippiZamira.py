@@ -66,7 +66,7 @@ def palabraLarga():
     frase = frase.split(" ")
     larga = ''
     for i in frase:
-        if i > larga:
+        if len(i) > len(larga):
             larga = i
     print(f'La palabra mas larga es {larga}')
     
