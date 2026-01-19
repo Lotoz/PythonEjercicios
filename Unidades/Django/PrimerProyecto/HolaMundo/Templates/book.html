@@ -1,0 +1,19 @@
+{% extends 'index.html' %}
+{%block title%}<title>Listado de libros</title>{%endblock title%}
+
+{%block content%}
+<h1>Listado de libros</h1>
+<ul>
+    {% for bo in books %}
+    <li>{{ bo.cod }} {{ bo.title }}
+        <ul>
+            {% for au in bo.author.all %}
+            <li>
+                {{au}}
+            </li>
+            {% endfor %}
+        </ul>
+    </li>
+    {% endfor %}
+</ul>
+{%endblock content%}

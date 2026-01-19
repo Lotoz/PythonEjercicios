@@ -7,3 +7,5 @@ Py manage.py runserver
 
 #Generar extras
 Py manage.py startapp HolaMundo
+Contrasena 
+Zamira2003

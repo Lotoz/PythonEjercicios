@@ -4,13 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prueba de index</title>
+    {%block title%}
+    <title> Blog de autores y libros </title>
+    {%endblock title%}
+
+    {%block css%}
+    <style>
+        .links {
+            text-decoration: double;
+            color: darkorchid;
+            background-color: rgba(0, 225, 0, 0.701);
+            width: 20%;
+        }
+    </style>
+    {%endblock css%}
 </head>
 
 <body>
-    <h1>Hola we</h1>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia minima modi animi omnis nobis autem nemo
-        ipsum, aut quis dolores ratione aliquid inventore provident fuga accusamus earum ipsam iure quia.</p>
+    {%block menu%}
+    <ul class="links">
+        <li><a href="/">Index</a></li>
+        <li><a href="/autor/">Autores</a></li>
+        <li><a href="/libro/">Libros</a></li>
+    </ul>
+    {%endblock menu%}
+    {%block content%}
+    <h1>Este es el index</h1>
+    {%endblock content%}
+    {%block footer%}
+    <hr>
+    <h1>Esto es un pie de pagina fachero</h1>
+    <button onclick="funny()">Dale al boton!</button>
+    {%endblock footer%}
+    {%block js%}
+    <script>
+        function funny() {
+            window.alert('Script heradado guapo!');
+        }
+    </script>
+    {%endblock js%}
 </body>
 
 </html>

@@ -17,14 +17,19 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
 
-from HolaMundo import views # Importo nuestro módulo views
+from HolaMundo import views # Importo nuestro módulo views AQUI SE EXPORTAN TOdOS LOS METODOS
 urlpatterns = [
-    path('', views.hola_mundo), #indicamos que la vista la queremos mostrar en esa   ruta.
+    path('', views.home), #indicamos que la vista la queremos mostrar en esa   ruta.
 #Si ponemos path('', views.index), no haría falta poner en el navegador el directorio.
-    path('otra/', views.home), #nueva vista
+    path('home/', views.home), #nueva vista
     path('admin/', admin.site.urls),
+ 
+    path('autor/',views.autor_list),
+    path('libro/',views.libro_list),
+    path ('new-autor/',views.autor_create)
 ]

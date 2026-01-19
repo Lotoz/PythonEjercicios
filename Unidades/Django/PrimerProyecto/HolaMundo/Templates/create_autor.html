@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+{%block title%}<title>Creacion de un author</title>{%endblock title%}
+{%block content%}
+<h1>Creacion de autor</h1>
+
+<form action="" method="post">
+    {%csrf_token%}
+    {{autor_form}}
+    <button type="submit">Guardar</button>
+</form>
+
+{%endblock content%}
